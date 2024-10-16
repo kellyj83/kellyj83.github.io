@@ -27,7 +27,7 @@ In this short project, I create a short HTML Document that explains how you can 
     <img src="/images/stock.png" alt="Stochastics for Stocks" style="max-width: 100%; height: auto;">
 </div>
 <div style="display: flex; justify-content: center;">
-  <a href="/files/GBM_Doc.html" target="_blank">
+  <a href="/files/GBM_Doc.html" target="_blank" style="text-decoration: none;">
     <button style="background-color: #4CAF50; color: white; padding: 10px 20px; margin-right: 10px; border: none; border-radius: 5px; cursor: pointer;">
       Project Doc
     </button>
@@ -47,12 +47,12 @@ In my undergraduate thesis, I investigated the **Finite Element Method (FEM)** f
 </div>
 
 <div style="text-align: center;">
-  <a href="/files/femthesis.pdf" target="_blank">
+  <a href="/files/femthesis.pdf" target="_blank" style="text-decoration: none;">
     <button style="background-color: #4CAF50; color: white; padding: 10px 20px; margin-right: 10px; border: none; border-radius: 5px; cursor: pointer;">
       Thesis
     </button>
   </a>
-  <a href="/files/femposter.pdf" target="_blank">
+  <a href="/files/femposter.pdf" target="_blank" style="text-decoration: none;">
     <button style="background-color: #008CBA; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
       Poster
     </button>
