@@ -18,6 +18,25 @@ Here is the link to my [CV](/files/cv.pdf).
 
 ---
 
+### Applying Stochastic Processes to Population Modelling
+
+In this short project, I create a short HTML Document that explains how the Ornstein-Uhlenbeck process (Mean-Reverting) Process can be used to model birth/mortality rates of a population. 
+
+
+<div style="text-align: center;">
+    <img src="/images/ou.png" alt="Stochastics for Mortality Rates" style="max-width: 100%; height: auto;">
+</div>
+<div style="display: flex; justify-content: center;">
+  <a href="/files/OrnsteinUhlenbeck.html" target="_blank" style="text-decoration: none;">
+    <button style="background-color: #4CAF50; color: white; padding: 10px 20px; margin-right: 10px; border: none; border-radius: 5px; cursor: pointer;">
+      Project Doc
+    </button>
+  </a>
+</div>
+
+
+---
+
 ### Applying Stochastic Processes to Financial Modelling
 
 In this short project, I create a short HTML Document that explains how you can apply Stochastic Calculus (Geometric Brownian Motion) to predict trends for Index Funds.
