@@ -20,7 +20,7 @@ Here is the link to my [CV](/files/cv.pdf).
 
 ### Applying Stochastic Processes to Population Modelling
 
-In this short project, we explore how the Ornstein-Uhlenbeck process (Mean-Reverting) Process can be used to model birth/mortality rates of a population. 
+In this short project, we explore how the Ornstein-Uhlenbeck (Mean-Reverting) Process can be used to model birth/mortality rates of a population. 
 
 
 <div style="text-align: center;">
