@@ -6,11 +6,11 @@ layout: homepage
 
 ---
 
-I am a graduate in Mathematics from Trinity College Dublin, currently working as a Risk Consultant at Murex. 
+I am currently a student at the University of Cambridge pursuing a Master's in Statistics and Applied Mathematics (Part III). I previously obtained an undergraduate degree in Mathematics from Trinity College Dublin, and worked as a Credit Risk Consultant at Murex. 
 
-I have a strong interest in Finance, Statistics, Music, and Sports, and am actively engaged in projects that focus on Computational Mathematics.
+I have a strong interest in Statistics, Finance, Music, and Sports, and am actively engaged in projects that focus on Computational Mathematics.
 
-Here is the link to my [CV](/files/cv.pdf).
+Here is the link to my [CV](/files/cv_sep25.pdf).
 
 ---
 
