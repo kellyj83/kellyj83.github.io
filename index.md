@@ -6,7 +6,9 @@ layout: homepage
 
 ---
 
-I am currently a student at the University of Cambridge pursuing a Master's in Statistics and Applied Mathematics (Part III). I previously obtained an undergraduate degree in Mathematics from Trinity College Dublin, and worked as a Credit Risk Consultant at Murex. 
+I am currently a student at the University of Cambridge pursuing a Master's in Statistics and Applied Mathematics (Part III). 
+
+I previously obtained an undergraduate degree in Mathematics from Trinity College Dublin, and worked as a Credit Risk Consultant at Murex. 
 
 I have a strong interest in Statistics, Finance, Music, and Sports, and am actively engaged in projects that focus on Computational Mathematics.
 
