@@ -20,6 +20,25 @@ Here is the link to my [CV](/files/cv_sep25.pdf).
 
 ---
 
+### Applications of the Kelly Criterion to Multiple Investment Games
+
+In this project, we apply the Kelly Criterion investment strategy to a multiple investment game and apply machine learning to find the optimal fractions of our initial wealth to invest. 
+
+
+<div style="text-align: center;">
+    <img src="/images/kc.png" alt="Growth Value for Different Investment Fractions" style="max-width: 80%; height: auto;">
+</div>
+<div style="display: flex; justify-content: center;">
+  <a href="/files/kellycriterion2D.html" target="_blank" style="text-decoration: none;">
+    <button style="background-color: #4CAF50; color: white; padding: 10px 20px; margin-right: 10px; border: none; border-radius: 5px; cursor: pointer;">
+      Project Doc
+    </button>
+  </a>
+</div>
+
+
+---
+
 ### Applying Stochastic Processes to Population Modelling
 
 In this short project, we explore how the Ornstein-Uhlenbeck (Mean-Reverting) Process can be used to model birth/mortality rates of a population. 
