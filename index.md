@@ -26,7 +26,7 @@ In this project, we apply the Kelly Criterion investment strategy to a multiple 
 
 
 <div style="text-align: center;">
-    <img src="/images/kc.png" alt="Growth Value for Different Investment Fractions" style="max-width: 80%; height: auto;">
+    <img src="/images/grad_descent.png" alt="Growth Value for Different Investment Fractions" style="max-width: 80%; height: auto;">
 </div>
 <div style="display: flex; justify-content: center;">
   <a href="/files/kellycriterion2D.html" target="_blank" style="text-decoration: none;">
