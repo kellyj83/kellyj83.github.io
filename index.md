@@ -10,13 +10,31 @@ I am currently a student at the University of Cambridge pursuing a Master's in S
 
 I previously obtained an undergraduate degree in Mathematics from Trinity College Dublin, and worked as a Credit Risk Consultant at Murex. 
 
-I have a strong interest in Statistics, Finance, Music, and Sports, and am actively engaged in projects that focus on Computational Mathematics.
+I have a strong interest in Statistics, Finance, Music, and Sports, and am actively engaged in projects that focus on Computational Mathematics and Quantitative Finance.
 
-Here is the link to my [CV](/files/cv_sep25.pdf).
+Here is the link to my [CV](/files/CV.pdf).
 
 ---
 
 ## Selected Projects
+
+---
+
+### Combined Defensive Allocation & Kalman Filter Pairs Strategy 
+
+In this project, we developed a multi-strategy leveraged portfolio integrating Strategic Gold Allocation, Defensive Adaptive Asset Allocation (DAA), and Market-Neutral Pairs Trading. Through 6 month backtesting, we achieved a Sharpe Ratio of ~2.0 and a maximum drawdown of 6%.
+
+
+<div style="text-align: center;">
+    <img src="/images/Graph.png" alt="Growth Value for Different Investment Fractions" style="max-width: 80%; height: auto;">
+</div>
+<div style="display: flex; justify-content: center;">
+  <a href="/files/strategy.html" target="_blank" style="text-decoration: none;">
+    <button style="background-color: #4CAF50; color: white; padding: 10px 20px; margin-right: 10px; border: none; border-radius: 5px; cursor: pointer;">
+      Project Doc
+    </button>
+  </a>
+</div>
 
 ---
 
