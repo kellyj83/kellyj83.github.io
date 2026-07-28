@@ -550,27 +550,29 @@ svg {
 }
 
 @media (min-width: 56rem) {
+  /* Full-bleed figure across the top rather than a side-by-side split: the
+     figures here are wide multi-panel plots, and a tall side column would
+     letterbox them into a thin strip. */
   .card--featured {
     grid-column: 1 / -1;
-    flex-direction: row;
   }
 
   .card--featured .card__figure {
-    flex: 1 1 55%;
-    aspect-ratio: auto;
-    border-bottom: 0;
-    border-right: 1px solid var(--border);
     padding: 1.25rem;
   }
 
   .card--featured .card__body {
-    flex: 1 1 45%;
-    padding: 2rem 2.1rem;
-    justify-content: center;
+    padding: 1.9rem 2.1rem 2.1rem;
   }
 
   .card--featured .card__title {
     font-size: 1.4rem;
+  }
+
+  /* Keep the measure readable even though the card is full width. */
+  .card--featured .card__summary {
+    max-width: 46rem;
+    font-size: 1rem;
   }
 }
 

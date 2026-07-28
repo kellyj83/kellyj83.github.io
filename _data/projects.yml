@@ -1,8 +1,34 @@
 # Selected projects, rendered as cards by _layouts/homepage.html.
 # Set `featured: true` on at most one project — it gets the wide hero card.
 
-- title: Combined Defensive Allocation & Kalman Filter Pairs Strategy
+- title: "Part III Essay: Principled Approaches to Score Matching in Diffusion Models"
   featured: true
+  image: /images/diffusion.png
+  alt: >-
+    Two-moons samples denoised by the neural baseline and by MDE, above MMD,
+    Wasserstein-1 and C2ST curves over the reverse process
+  summary: >-
+    Diffusion models generate by reversing a noising SDE, which requires the
+    score of the perturbed data. I study Markovian De-noising Estimation, which
+    replaces the learned score network with a conditional expectation built
+    directly from sampled forward trajectories. It matches a DDPM baseline on
+    two-moons with no training phase, then degrades in six dimensions as local
+    neighbourhoods thin out. Supervised by Prof. Georg Maierhofer and Prof.
+    Eugene Wong.
+  stats:
+    - label: Training
+      value: "None"
+    - label: Compute vs NN
+      value: "~500× less"
+    - label: Dimensions
+      value: "2–6"
+  tags: [Python, PyTorch, Diffusion models, SDEs, Score matching, Kernel methods]
+  links:
+    - label: Read the essay
+      url: /files/part-iii-essay.pdf
+      primary: true
+
+- title: Combined Defensive Allocation & Kalman Filter Pairs Strategy
   image: /images/Graph.png
   alt: Equity curve and per-trade returns for the combined strategy backtest
   summary: >-
