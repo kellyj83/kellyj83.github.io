@@ -1,0 +1,77 @@
+# Selected projects, rendered as cards by _layouts/homepage.html.
+# Set `featured: true` on at most one project — it gets the wide hero card.
+
+- title: Combined Defensive Allocation & Kalman Filter Pairs Strategy
+  featured: true
+  image: /images/Graph.png
+  alt: Equity curve and per-trade returns for the combined strategy backtest
+  summary: >-
+    A multi-strategy leveraged portfolio combining strategic gold allocation,
+    Defensive Adaptive Asset Allocation (DAA) and market-neutral pairs trading,
+    with the pairs leg driven by a Kalman filter on the hedge ratio.
+  stats:
+    - label: Sharpe ratio
+      value: "~2.0"
+    - label: Max drawdown
+      value: "6%"
+    - label: Backtest
+      value: "6 months"
+  tags: [Python, QuantConnect, Kalman filter, Pairs trading]
+  links:
+    - label: Project doc
+      url: /files/strategy.html
+      primary: true
+
+- title: Applications of the Kelly Criterion to Multiple Investment Games
+  image: /images/grad_descent.png
+  alt: Gradient descent surface over investment fractions
+  summary: >-
+    Extends the Kelly criterion to a game with several simultaneous bets, then
+    uses gradient descent to learn the fractions of wealth that maximise the
+    long-run growth rate.
+  tags: [Python, Optimisation, Gradient descent]
+  links:
+    - label: Project doc
+      url: /files/kellycriterion2D.html
+      primary: true
+
+- title: Applying Stochastic Processes to Population Modelling
+  image: /images/ou.png
+  alt: Ornstein-Uhlenbeck paths fitted to mortality rate data
+  summary: >-
+    Fits an Ornstein–Uhlenbeck (mean-reverting) process to birth and mortality
+    rates, calibrating the parameters and testing the mean-reversion assumption
+    against the data.
+  tags: [Python, Ornstein–Uhlenbeck, statsmodels]
+  links:
+    - label: Project doc
+      url: /files/OrnsteinUhlenbeck.html
+      primary: true
+
+- title: Applying Stochastic Processes to Financial Modelling
+  image: /images/stock.png
+  alt: Simulated geometric Brownian motion paths against index fund prices
+  summary: >-
+    Uses geometric Brownian motion to simulate index fund price paths, and
+    compares the resulting distribution of outcomes with the realised history.
+  tags: [Python, Geometric Brownian motion, Monte Carlo]
+  links:
+    - label: Project doc
+      url: /files/GBM_Doc.html
+      primary: true
+
+- title: "Final year thesis: Finite Element Method for Differential Equations"
+  image: /images/fem.png
+  alt: Finite element solution surface for a 2D PDE
+  summary: >-
+    Undergraduate thesis on the Finite Element Method for 1D and 2D PDEs —
+    Poisson, heat and elliptic equations — implemented in MATLAB with numerical
+    quadrature, then applied to the Black–Scholes equation to price European
+    calls and puts with a focus on error analysis.
+  tags: [MATLAB, FEM, PDEs, Black–Scholes]
+  links:
+    - label: Thesis
+      url: /files/femthesis.pdf
+      primary: true
+    - label: Poster
+      url: /files/femposter.pdf

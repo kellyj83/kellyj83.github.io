@@ -1,16 +1,47 @@
 title: Jonathan Kelly
-position: Mathematics Student
+position: MASt Statistics & Applied Mathematics (Part III)
 affiliation: University of Cambridge
+location: Cambridge, United Kingdom
 email: jdk37@cam.ac.uk
-keywords: minimal academic
-#google_scholar: https://scholar.google.com/
+tagline: >-
+  Statistics, stochastic processes and quantitative finance — with a bias
+  towards things I can build, backtest and break.
+
+description: >-
+  Jonathan Kelly — Part III Statistics and Applied Mathematics student at the
+  University of Cambridge. Projects in quantitative finance, stochastic
+  processes and computational mathematics.
+keywords: >-
+  Jonathan Kelly, Cambridge, Part III, MASt, quantitative finance, statistics,
+  stochastic processes, Kelly criterion, finite element method
+url: https://kellyj83.github.io
+
+interests:
+  - Statistics
+  - Quantitative finance
+  - Stochastic processes
+  - Numerical methods
+  - Music
+  - Sport
+
 github_link: https://github.com/kellyj83
 linkedin: https://www.linkedin.com/in/jonathan-kelly-4b70121b3/
-cv_link:
-avatar: ./assets/img/p.jpg
-google_analytics: UA-111540567-4
-favicon: ./assets/img/favicon.png
-favicon_dark: ./assets/img/favicon-dark.png
-description: The Strata Academic is a simple and elegant jekyll theme for academic personal homepage.
-canonical: https://strata-academic.yyliu.net/
-remote_theme: yaoyao-liu/strata-academic
+cv_link: /files/CV.pdf
+
+avatar: /assets/img/profile.jpg
+favicon: /assets/img/favicon.png
+favicon_dark: /assets/img/favicon-dark.png
+theme_color: "#0e7c6b"
+theme_color_dark: "#0e1114"
+
+sass:
+  style: compressed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - strata-academic.gemspec
+  - script
+  - .rubocop.yml
+  - .travis.yml
+  - README.md
