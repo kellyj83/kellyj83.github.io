@@ -15,13 +15,6 @@
     two-moons with no training phase, then degrades in six dimensions as local
     neighbourhoods thin out. Supervised by Prof. Georg Maierhofer and Prof.
     Eugene Wong.
-  stats:
-    - label: Training
-      value: "None"
-    - label: Compute vs NN
-      value: "~500× less"
-    - label: Dimensions
-      value: "2–6"
   tags: [Python, PyTorch, Diffusion models, SDEs, Score matching, Kernel methods]
   links:
     - label: Read the essay
@@ -35,13 +28,6 @@
     A multi-strategy leveraged portfolio combining strategic gold allocation,
     Defensive Adaptive Asset Allocation (DAA) and market-neutral pairs trading,
     with the pairs leg driven by a Kalman filter on the hedge ratio.
-  stats:
-    - label: Sharpe ratio
-      value: "~2.0"
-    - label: Max drawdown
-      value: "6%"
-    - label: Backtest
-      value: "6 months"
   tags: [Python, QuantConnect, Kalman filter, Pairs trading]
   links:
     - label: Project doc

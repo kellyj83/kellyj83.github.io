@@ -10,7 +10,7 @@ A single-page Jekyll site, deployed automatically by GitHub Pages from `master`.
 | --- | --- |
 | `index.md` | The "About" prose. Everything else is generated. |
 | `_data/projects.yml` | The project cards — title, summary, image, tags, stats, links. |
-| `_config.yml` | Name, role, contact details, interests, social links. |
+| `_config.yml` | Name, role, tagline, contact details, social links. |
 | `_layouts/homepage.html` | Page structure and `<head>` metadata. |
 | `_sass/site.scss` | All styling. Colours live in the custom properties at the top. |
 | `assets/js/site.js` | Sticky-nav shadow and scroll reveal. |
