@@ -1,6 +1,10 @@
 /* -------------------------------------------------------------------------
    Jonathan Kelly — personal site
+
    Single-column layout, light/dark via prefers-color-scheme.
+   Type: IBM Plex Sans for prose, IBM Plex Mono for all UI chrome (nav,
+   buttons, metadata, tags, footer). Square corners, hairline rules, no
+   shadows — projects sit in one continuous grid rather than floating cards.
    ---------------------------------------------------------------------- */
 
 /* Tokens ---------------------------------------------------------------- */
@@ -8,48 +12,45 @@
 :root {
   color-scheme: light dark;
 
-  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Helvetica, Arial, sans-serif;
+  --font-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas,
+    monospace;
 
-  --bg: #fbfbfa;
-  --bg-tint: #f4f5f4;
+  --bg: #ffffff;
+  --bg-tint: #f6f7f8;
   --surface: #ffffff;
-  --text: #16191c;
-  --text-soft: #4c545d;
-  --text-muted: #767f89;
-  --border: #e4e6e5;
-  --border-strong: #d3d7d6;
+  --text: #0f1115;
+  --text-soft: #41474f;
+  --text-muted: #767d86;
+  --border: #e3e5e8;
+  --border-strong: #c9cdd2;
 
-  --accent: #0e7c6b;
-  --accent-hover: #0a6153;
-  --accent-tint: rgba(14, 124, 107, 0.09);
+  --accent: #1f4fe0;
+  --accent-hover: #173cae;
+  --accent-tint: rgba(31, 79, 224, 0.07);
+  /* Text colour for filled accent surfaces. */
+  --on-accent: #ffffff;
 
-  --shadow-sm: 0 1px 2px rgba(16, 24, 32, 0.04);
-  --shadow-md: 0 10px 28px -12px rgba(16, 24, 32, 0.18);
-
-  --radius: 14px;
-  --radius-sm: 9px;
   --wrap: 66rem;
   --prose: 44rem;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #0e1114;
-    --bg-tint: #131a1e;
-    --surface: #161b20;
-    --text: #e8ecef;
-    --text-soft: #b3bcc4;
-    --text-muted: #8b959e;
-    --border: #262d34;
-    --border-strong: #333c44;
+    --bg: #0b0d10;
+    --bg-tint: #12151a;
+    --surface: #0f1216;
+    --text: #e6e9ed;
+    --text-soft: #a8b0ba;
+    --text-muted: #79828d;
+    --border: #20252b;
+    --border-strong: #2d343c;
 
-    --accent: #46cfb6;
-    --accent-hover: #6fdcc7;
-    --accent-tint: rgba(70, 207, 182, 0.12);
-
-    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
-    --shadow-md: 0 12px 32px -14px rgba(0, 0, 0, 0.7);
+    --accent: #6f9bff;
+    --accent-hover: #93b4ff;
+    --accent-tint: rgba(111, 155, 255, 0.12);
+    --on-accent: #0b0d10;
   }
 }
 
@@ -112,7 +113,6 @@ a:hover {
 :focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
-  border-radius: 4px;
 }
 
 svg {
@@ -136,8 +136,7 @@ svg {
   z-index: 100;
   padding: 0.7rem 1.1rem;
   background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-strong);
 }
 
 .skip-link:focus {
@@ -151,6 +150,8 @@ svg {
   position: sticky;
   top: 0;
   z-index: 40;
+  /* Plain colour first: color-mix is unsupported in older browsers, which
+     would otherwise leave the bar transparent over scrolling content. */
   background: var(--bg);
   background: color-mix(in srgb, var(--bg) 82%, transparent);
   backdrop-filter: saturate(180%) blur(12px);
@@ -173,12 +174,18 @@ svg {
   gap: 1rem;
 }
 
-.nav__brand {
-  font-weight: 600;
-  font-size: 0.975rem;
-  letter-spacing: -0.01em;
-  color: var(--text);
+.nav__brand,
+.nav__links a {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 400;
+  text-transform: lowercase;
+  letter-spacing: 0.01em;
   text-decoration: none;
+}
+
+.nav__brand {
+  color: var(--text);
   opacity: 0;
   transform: translateY(-4px);
   transition: opacity 0.25s ease, transform 0.25s ease;
@@ -199,10 +206,7 @@ svg {
 }
 
 .nav__links a {
-  font-size: 0.9rem;
-  font-weight: 500;
   color: var(--text-soft);
-  text-decoration: none;
 }
 
 .nav__links a:hover {
@@ -212,53 +216,35 @@ svg {
 /* Hero ------------------------------------------------------------------ */
 
 .hero {
-  position: relative;
   padding: clamp(3rem, 9vw, 6rem) 0 clamp(2.5rem, 6vw, 4rem);
-  text-align: center;
-  overflow: hidden;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: -40% 0 auto;
-  height: 32rem;
-  background: radial-gradient(
-    50% 50% at 50% 50%,
-    var(--accent-tint) 0%,
-    transparent 70%
-  );
-  pointer-events: none;
+  border-bottom: 1px solid var(--border);
 }
 
 .hero__inner {
-  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .hero__avatar {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
+  width: 96px;
+  height: 96px;
   object-fit: cover;
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-strong);
   margin-bottom: 1.5rem;
 }
 
 .hero__name {
   font-size: clamp(2.1rem, 6vw, 3.1rem);
+  font-weight: 600;
   letter-spacing: -0.035em;
-  font-weight: 700;
 }
 
 .hero__role {
-  margin: 0.6rem 0 0;
+  margin: 0.7rem 0 0;
   color: var(--text-soft);
-  font-size: 1.03rem;
-  font-weight: 500;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
 }
 
 .hero__role .sep {
@@ -277,12 +263,12 @@ svg {
 .hero__meta {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 0.5rem 1.5rem;
   list-style: none;
   margin: 1.4rem 0 0;
   padding: 0;
-  font-size: 0.9rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
   color: var(--text-muted);
 }
 
@@ -293,7 +279,6 @@ svg {
 }
 
 .hero__meta svg {
-  color: var(--text-muted);
   opacity: 0.8;
 }
 
@@ -309,7 +294,6 @@ svg {
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 0.6rem;
   margin-top: 2rem;
 }
@@ -322,52 +306,39 @@ svg {
   gap: 0.5rem;
   padding: 0.55rem 1.05rem;
   border: 1px solid var(--border-strong);
-  border-radius: 999px;
   background: var(--surface);
   color: var(--text-soft);
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 400;
   line-height: 1.4;
+  text-transform: lowercase;
   text-decoration: none;
-  box-shadow: var(--shadow-sm);
   transition: color 0.15s ease, border-color 0.15s ease,
-    background-color 0.15s ease, transform 0.15s ease;
+    background-color 0.15s ease;
 }
 
 .btn:hover {
   color: var(--accent);
   border-color: var(--accent);
   background: var(--accent-tint);
-  transform: translateY(-1px);
 }
 
-.btn--primary {
+.btn--primary,
+.btn--primary:hover {
   background: var(--accent);
   border-color: var(--accent);
-  color: #fff;
-}
-
-@media (prefers-color-scheme: dark) {
-  .btn--primary {
-    color: #08201c;
-  }
+  color: var(--on-accent);
 }
 
 .btn--primary:hover {
   background: var(--accent-hover);
   border-color: var(--accent-hover);
-  color: #fff;
-}
-
-@media (prefers-color-scheme: dark) {
-  .btn--primary:hover {
-    color: #08201c;
-  }
 }
 
 .btn--sm {
   padding: 0.42rem 0.9rem;
-  font-size: 0.85rem;
+  font-size: 0.76rem;
 }
 
 .btn__arrow {
@@ -389,11 +360,17 @@ svg {
   align-items: center;
   gap: 1rem;
   margin-bottom: 2rem;
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
   color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-transform: lowercase;
+  letter-spacing: 0;
+}
+
+.section__title span::before {
+  content: "// ";
+  color: var(--accent);
 }
 
 .section__title::after {
@@ -426,36 +403,24 @@ svg {
   margin: 2em 0;
 }
 
-/* Chips ----------------------------------------------------------------- */
+/* Tags ------------------------------------------------------------------ */
 
 .chips {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 0.4rem;
   list-style: none;
-  margin: 1.75rem 0 0;
+  margin: 1.1rem 0 0;
   padding: 0;
 }
 
 .chips li {
-  padding: 0.28rem 0.7rem;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  background: var(--bg-tint);
-  color: var(--text-muted);
-  font-size: 0.8rem;
-  font-weight: 500;
-  white-space: nowrap;
-}
-
-.chips--sm {
-  margin-top: 1.1rem;
-  gap: 0.4rem;
-}
-
-.chips--sm li {
-  font-size: 0.74rem;
   padding: 0.2rem 0.6rem;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  white-space: nowrap;
 }
 
 /* Project grid ---------------------------------------------------------- */
@@ -465,7 +430,8 @@ svg {
   /* Two columns on desktop — four non-featured projects sit 2×2 rather than
      leaving an orphan on a third column. */
   grid-template-columns: repeat(auto-fill, minmax(23rem, 1fr));
-  gap: 1.5rem;
+  gap: 0;
+  counter-reset: card;
 }
 
 .card {
@@ -473,15 +439,15 @@ svg {
   flex-direction: column;
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  /* Pull each card onto its neighbour so adjacent borders collapse into one
+     continuous hairline grid instead of doubling up. */
+  margin: 0 -1px -1px 0;
   overflow: hidden;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  transition: background-color 0.2s ease;
 }
 
 .card:hover {
-  border-color: var(--border-strong);
-  box-shadow: var(--shadow-md);
-  transform: translateY(-3px);
+  background: var(--bg-tint);
 }
 
 .card__figure {
@@ -515,16 +481,28 @@ svg {
 
 .card__flag {
   margin: 0 0 0.6rem;
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
   color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: lowercase;
 }
 
 .card__title {
   font-size: 1.13rem;
   letter-spacing: -0.015em;
+}
+
+/* Sequence number, numbered from the grid rather than the data file. */
+.card__title::before {
+  counter-increment: card;
+  content: counter(card, decimal-leading-zero);
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0;
 }
 
 .card__summary {
@@ -588,19 +566,18 @@ svg {
 }
 
 .stat dt {
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
   color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: lowercase;
 }
 
 .stat dd {
   margin: 0.15rem 0 0;
+  color: var(--text);
   font-size: 1.3rem;
   font-weight: 600;
   letter-spacing: -0.02em;
-  color: var(--text);
   font-variant-numeric: tabular-nums;
 }
 
@@ -610,7 +587,8 @@ svg {
   border-top: 1px solid var(--border);
   padding: 2rem 0 2.5rem;
   color: var(--text-muted);
-  font-size: 0.85rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
 }
 
 .footer__inner {
